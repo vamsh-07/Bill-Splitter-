@@ -1,0 +1,18 @@
+package com.example.billsplitter.utils
+
+import android.widget.EditText
+
+// Extension to get trimmed text from EditText
+fun EditText.getTextValue(): String {
+    return this.text.toString().trim()
+}
+
+// Extension to check if EditText is empty
+fun EditText.isEmpty(): Boolean {
+    return this.text.toString().trim().isEmpty()
+}
+
+// Extension to safely convert string to double
+fun String.toDoubleOrZero(): Double {
+    return this.toDoubleOrNull() ?: 0.0
+}
